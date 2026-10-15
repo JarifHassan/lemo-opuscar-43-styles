@@ -4,8 +4,8 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-**<!--n-->43<!--/n--> film styles, each with a short film made entirely in code.**<br>
-**<!--n-->43<!--/n--> 种影片风格，每种都配一支完全用代码做出来的短片。**
+**<!--n-->44<!--/n--> film styles, each with a short film made entirely in code.**<br>
+**<!--n-->44<!--/n--> 种影片风格，每种都配一支完全用代码做出来的短片。**
 
 Pick a style, bring your own story, and let your coding agent direct the film.<br>
 选一个风格，带上你自己的故事，让你的编程 agent 来当导演。
@@ -119,6 +119,7 @@ Click a frame for its `STYLE.md`.
 </tr>
 <tr>
 <td width="33%" valign="top"><a href="styles/urban-sketch/STYLE.md"><img src="docs/frames/urban-sketch.jpg" alt="Urban Sketch · Pen &amp; Wash"></a><br><b>Urban Sketch · Pen &amp; Wash</b><br><i>Where the Wind Went</i><br><sub>A park that is only a pen sketch; wherever the wind carries her straw hat, colour follows.</sub></td>
+<td width="33%" valign="top"><a href="styles/p5-brush/STYLE.md"><img src="docs/frames/p5-brush.jpg" alt="p5.brush Natural Media"></a><br><b>p5.brush Natural Media</b><br><i>First Light</i><br><sub>A drop of gold blooms into the sun, sunrise paints a pencilled valley, and a blue bird dives for its breakfast before flying off the painting into the margin.</sub></td>
 </tr>
 </table>
 

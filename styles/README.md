@@ -15,6 +15,7 @@ Users may name a style in English, in Chinese, or by its folder. Find it here, t
 | One-line Drawing | 一笔画 | [`one-line`](one-line/STYLE.md) | *The Line That Never Lifted* |
 | Whiteboard Explainer | 白板讲解 | [`whiteboard`](whiteboard/STYLE.md) | *Einstein in Your Pocket* |
 | Urban Sketch · Pen & Wash | 钢笔淡彩 | [`urban-sketch`](urban-sketch/STYLE.md) | *Where the Wind Went* |
+| p5.brush Natural Media | p5.brush 自然笔触 | [`p5-brush`](p5-brush/STYLE.md) | *First Light* |
 
 ## East Asian Traditions · 东方传统
 

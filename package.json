@@ -4,9 +4,13 @@
   "private": true,
   "type": "module",
   "description": "Film styles for coding agents: each style ships a prompt and a demo film made entirely in code, on a shared toolkit.",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "license": "MIT",
   "dependencies": {
+    "p5": "^2.3.4",
+    "p5.brush": "^2.2.3",
     "playwright-core": "^1.63.0",
     "three": "^0.170.0"
   }

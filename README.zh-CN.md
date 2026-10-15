@@ -4,7 +4,7 @@
 
 [English](README.md) · **简体中文**
 
-**<!--n-->43<!--/n--> 种影片风格，每种都配一支完全用代码做出来的短片。**
+**<!--n-->44<!--/n--> 种影片风格，每种都配一支完全用代码做出来的短片。**
 
 选一个风格，带上你自己的故事，让你的编程 agent 来当导演。
 
@@ -115,6 +115,7 @@ agent 会读三份指南，像一个小工作室一样开工。指南是英文�
 </tr>
 <tr>
 <td width="33%" valign="top"><a href="styles/urban-sketch/STYLE.md"><img src="docs/frames/urban-sketch.jpg" alt="钢笔淡彩"></a><br><b>钢笔淡彩</b><br>Urban Sketch · Pen &amp; Wash<br><i>Where the Wind Went</i><br><sub>公园只是一张钢笔速写，风把草帽吹到哪里，哪里才有颜色。</sub></td>
+<td width="33%" valign="top"><a href="styles/p5-brush/STYLE.md"><img src="docs/frames/p5-brush.jpg" alt="p5.brush 自然笔触"></a><br><b>p5.brush 自然笔触</b><br>p5.brush Natural Media<br><i>First Light</i><br><sub>一滴金色在纸上晕开成太阳，晨光把铅笔草稿染上颜色；一只蓝色翠鸟俯冲捕鱼，然后飞出画面，落在页边成了一幅铅笔速写。</sub></td>
 </tr>
 </table>
 

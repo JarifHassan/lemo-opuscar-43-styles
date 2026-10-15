@@ -8,6 +8,7 @@
 # The library is a sparse clone of the main branch: guides, core/ tools and every STYLE.md. Big assets: tools/fetch.sh.
 # LEMO_OPUSCAR_HOME = where the library lives (default: the clone you stand in, else ~/lemo-opuscar).
 set -e
+export PYTHONUTF8=1   # Windows consoles default to cp1252; the scripts print UTF-8 (✓ ↓ ✗)
 REPO=${LEMO_OPUSCAR_REPO:-https://github.com/lemomo-ai/lemo-opuscar.git}
 
 # 1. Which library: $LEMO_OPUSCAR_HOME, else the clone we are standing in, else ~/lemo-opuscar
@@ -50,10 +51,14 @@ node_ok() { [ "$(cat "$LIB/node_modules/.lemo-ok" 2>/dev/null)" = "$(sig "$LIB/p
 py_ok() { [ "$(cat "$LIB/.venv/.lemo-$1" 2>/dev/null)" = "$(pysig "$(req "$1")")" ]; }
 # a Python 3.11+ for the venv when uv is absent; kokoro-onnx (voice tier) needs < 3.14, so those come first
 find_py() {
-  for c in python3.12 python3.13 python3.11 python3; do
+  for c in python3.12 python3.13 python3.11 python3 python py; do   # python / py: Windows names
     "$c" -c 'import sys; sys.exit(sys.version_info < (3, 11))' 2>/dev/null && { echo "$c"; return 0; }
   done
   return 1
+}
+# Windows (Git Bash): venvs keep python.exe in .venv/Scripts; link .venv/bin to it so every .venv/bin/python works
+win_venv_link() {
+  [ -d .venv/Scripts ] && [ ! -e .venv/bin ] && powershell.exe -NoProfile -Command "New-Item -ItemType Junction -Path .venv/bin -Target .venv/Scripts" >/dev/null || true
 }
 
 case "$1" in
@@ -70,10 +75,12 @@ case "$1" in
     fi
     node node_modules/playwright-core/cli.js install chromium-headless-shell   # the renderer's browser (a no-op when present)
     # a venv whose Python is gone (after a Python upgrade) can't be repaired in place: make it again
+    win_venv_link
     [ ! -e .venv ] || .venv/bin/python -c pass 2>/dev/null || { echo "! $LIB/.venv is broken; making it again"; rm -rf .venv; }
     if [ ! -x .venv/bin/python ]; then
       if command -v uv >/dev/null; then uv venv --quiet --python 3.12 .venv
       else py=$(find_py) || { echo "✗ Python 3.11+ is needed (or install uv, which fetches it)"; exit 1; }; "$py" -m venv .venv; fi
+      win_venv_link
     fi
     for t in $tiers; do
       py_ok "$t" && continue

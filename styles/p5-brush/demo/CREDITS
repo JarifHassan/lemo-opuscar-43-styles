@@ -1,0 +1,16 @@
+First Light — demo of the p5.brush Natural Media style
+
+Drawing engine
+  p5.brush 2.2 by Alejandro Campos Uribe — MIT — https://github.com/acamposuribe/p5.brush (npm: p5.brush, standalone build)
+
+Fonts (OFL 1.1, fetched by fetch_fonts.sh from https://github.com/google/fonts; not in git)
+  Caveat — Impallari Type — fonts/OFL-caveat.txt
+  Cormorant Garamond Italic — Christian Thalmann — fonts/OFL-cormorant.txt
+
+Music samples (CC0 1.0), played by core/audio/sampler.py
+  VS Chamber Orchestra: Community Edition (Versilian Studios) — cellos, contrabass, contrabass_pizz, flute, flute_stac, horn, timpani, violas, violin, violins
+  Versilian Community Sample Library (Versilian Studios) — glockenspiel, gran_cassa, hand_chimes, harp, vibraphone_bowed
+  FreePats project (freepats.zenvoid.org) — kalimba
+
+Sound effects: synthesised in mix.py and core/audio/sfx.py (no recordings).
+Everything else (paper, light, layers, the bird) is drawn in code.

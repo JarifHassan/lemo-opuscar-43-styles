@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>First Light — p5.brush Natural Media</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <style>
+    html, body { margin: 0; background: #a99677; overflow: hidden; }
+    #stage { position: relative; width: 1920px; height: 1080px; }
+    #stage canvas { position: absolute; left: 0; top: 0; }
+  </style>
+</head>
+<body>
+  <div id="stage"></div>
+  <script type="module">
+    import { start } from './film.js';
+    // Paint after the load event: the layers take a while to paint, and the render tools wait for READY, not for load.
+    window.addEventListener('load', () => setTimeout(async () => {
+      await start(document.getElementById('stage'));
+      // Opened in a normal browser (not by the render tools): play it in real time.
+      if (!navigator.webdriver) {
+        const t0 = performance.now();
+        const tick = () => { window.render(((performance.now() - t0) / 1000) % window.DUR); requestAnimationFrame(tick); };
+        tick();
+      }
+    }, 0));
+  </script>
+</body>
+</html>

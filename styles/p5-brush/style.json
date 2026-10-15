@@ -1,0 +1,18 @@
+{
+ "slug": "p5-brush",
+ "num": "55",
+ "en": "p5.brush Natural Media",
+ "cn": "p5.brush 自然笔触",
+ "category_en": "Hand-drawn & Painting",
+ "category_cn": "手绘与绘画",
+ "film": "First Light",
+ "line": "A drop of gold blooms into the sun, sunrise paints a pencilled valley, and a blue bird dives for its breakfast before flying off the painting into the margin.",
+ "line_cn": "一滴金色在纸上晕开成太阳，晨光把铅笔草稿染上颜色；一只蓝色翠鸟俯冲捕鱼，然后飞出画面，落在页边成了一幅铅笔速写。",
+ "uses": [
+  "Nature and wildlife",
+  "Travel and places",
+  "Field-guide explainers"
+ ],
+ "frame_sec": 12.9,
+ "dur": 24
+}

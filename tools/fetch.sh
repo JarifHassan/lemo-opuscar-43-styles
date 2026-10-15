@@ -3,6 +3,7 @@
 # An interrupted download resumes when you run the same command again. It needs about 2.2x the pack's size
 # in free disk space (the download, then the unpacked files).
 set -e
+export PYTHONUTF8=1   # Windows consoles default to cp1252; the scripts print UTF-8 (✓ ↓ ✗)
 cd "$(dirname "$0")/.."
 LIBS="freepats karoryfer salamander vcsl vsco2ce"
 usage() {
