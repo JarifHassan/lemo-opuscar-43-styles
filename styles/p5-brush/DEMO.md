@@ -1,6 +1,6 @@
 # p5.brush Natural Media — our demo
 
-One example among many. Don't reuse its story, arc, shots, props or timings.
+One example among many, and only a suggestion: this style is open (see STYLE.md), so *First Light* shows one thing p5.brush can do, not how a p5.brush film must look. Don't reuse its story, arc, shots, props, palette, score or timings; reuse its engine code only as tools.
 
 Demo: *First Light* (24 s) · `p5-brush.mp4` · source in [`demo/`](demo/)
 

@@ -1,11 +1,15 @@
 # p5.brush Natural Media — Style Prompt
 
-> A sketchbook landscape painted by a generative brush: graphite underdrawing, faceted watercolour glazes that pool at their edges, pen and pencil marks, gouache whites, and real light (bloom, rays, sparkle) laid over the paper. The world sits in painted depth layers that slide past each other, and colour *arrives* across the page as a wet front.
-> References (grammar only): plein-air watercolour sketchbooks (pencil first, glazes over, paper left white for light); layered paper-theatre and multiplane animation (flat painted planes at different depths); nature-documentary hunting sequences (anticipation, the dive, the silence, the payoff). Borrow the grammar, never a specific artwork, character, layout or melody.
+> **An open style.** Unlike the other styles in this library, almost nothing here is a fixed rule. The only thing that defines the style is the **medium**: marks made with p5.brush (its pencils, pens, markers, charcoal, hatching, watercolour fills and flow fields), on paper. Everything else in this file (the sketchbook page, the depth layers, the colour arriving, the light, the palettes, the camera moves, the sound) is a **suggested toolkit** learned from one demo, *First Light*. Use what serves the user's idea, change it, or leave it out. A p5.brush film can be ink-only, flat, abstract, night-time, urban, graphic, fast, with no landscape and no bird.
+> **Hard facts** are only the technical ones about how p5.brush and the render pipeline behave: §2 (engine and compositing) and §9 (pitfalls). They are true whatever the film looks like.
+> **First Light is an example, not a template.** Never reuse its story (drop → sunrise → bird → dive → margin), its subject, its palette, its camera route, its score or its end card. Start from the user's prompt.
+>
+> The look our demo used: a sketchbook landscape painted by a generative brush, with graphite underdrawing, faceted watercolour glazes that pool at their edges, pen and pencil marks, gouache whites, and real light (bloom, rays, sparkle) over the paper. The world sat in painted depth layers that slide past each other, and colour *arrived* across the page as a wet front.
+> References for that look (grammar only): plein-air watercolour sketchbooks (pencil first, glazes over, paper left white for light); layered paper-theatre and multiplane animation (flat painted planes at different depths). Borrow the grammar, never a specific artwork, character, layout or melody.
 
 ## 1. Essence, and what it is not
 
-What makes a frame read as this style in one glance:
+The one constant: **the marks are p5.brush marks.** Below are traits that make a frame read as "painted with p5.brush" in one glance; they are strong defaults, not requirements:
 
 - **Faceted translucent glazes.** Every coloured area is a p5.brush watercolour fill: a stack of slightly deformed translucent polygons whose edges darken where pigment pools. Large areas are built from several overlapping bands, never one flat shape.
 - **Pigment multiplies, light adds.** Paint darkens the paper and never lightens it; whites are either unpainted paper (reserves) or opaque gouache painted last. Sun, sparkle, glow and rays are light on top of the page, never paint.
@@ -28,8 +32,10 @@ Not Watercolor Brush (that style paints ribbon strokes with bristle tracks and n
 
 ## 3. Colour logic
 
+Defaults that worked in a painted landscape; pick a different logic when the idea needs it (monochrome ink, neon night, two-colour print, black paper with light pigments).
+
 - **Two temperatures.** A warm key (the light source and what it touches: peach, gold, coral rims) against cool shade (violet, cobalt, blue-green). Light-facing faces of every form get a warm rim; the other side gets a violet glaze.
-- **Aerial perspective is mandatory**: farther planes are lighter, cooler and less saturated; the nearest planes carry the purest greens and the darkest darks.
+- **Aerial perspective** (when there is depth): farther planes are lighter, cooler and less saturated; the nearest planes carry the purest greens and the darkest darks.
 - **Paper is the white.** Never paint pure white; reserve it, or add gouache.
 - **The hero owns one saturated hue** that no background uses (e.g. kingfisher cobalt + orange against a gold-violet world), so it is findable at thumbnail size.
 - **Accents are tiny and rhythmic**: poppies, buttercups, lupine spikes; a scatter of small saturated dots reads as life.
@@ -68,6 +74,8 @@ Framing: keep every parallax shot inside the painting (`|c − edge| ≥ 960 / z
 
 ## 7. Sound palette
 
+What our demo used, as a starting point. Choose the music and sound for the user's subject: a p5.brush film can carry jazz, electronics, a choir or near-silence just as well.
+
 - **Music**: acoustic and luminous: harp, flute, light strings, kalimba, glockenspiel, hand chimes, bowed vibraphone, a soft horn and timpani for the peak. Sampled (`core/audio/sampler.py`), never generic piano-and-strings.
 - **Foley of the medium**: graphite scratch (band-passed noise 1.6–7.5 kHz with grain clicks) for every pencil line and handwritten word; a wet-brush "shhh" for blooms and the arriving colour, panned along its sweep; a water-drop plink.
 - **Foley of the world**: birdsong (synthesised chirps), wind, water lapping, wingbeats panned with the subject, a whoosh crossing the stereo field, splashes built from a thump + bright crash + droplets.
@@ -75,6 +83,8 @@ Framing: keep every parallax shot inside the painting (`|c − edge| ≥ 960 / z
 - **Mix**: J-cut the place's ambience before its colour arrives; foley high-passed ~90 Hz; music under key foley; −14 LUFS master.
 
 ## 8. Native moves
+
+A menu, not a checklist. Invent new moves from what p5.brush can do: hatching that builds a shadow, a flow field that becomes wind or current, charcoal smudged into smoke, a marker line that turns into the path a character walks.
 
 - **Colour arrives.** A wet front sweeps from a cause (the sun, a lamp, a spill) across the pencilled page, painting the world as it passes. *Fits content like:* a sunrise over a city; a power grid coming back on; spring reaching a valley.
 - **A drop becomes the subject.** One drop of pigment lands on blank paper and blooms into the thing the film is about. *Fits content like:* a sun; a planet; a drop of ink that becomes a map.
@@ -110,7 +120,7 @@ Then add a `glowAt` at the lamp's screen position in the light pass.
 
 ## 11. Variation space
 
-You decide the place, the time of day, the hero, the cause of the colour, the planes, the palette within the colour logic, the music, the opening, the ending and the camera path.
+You decide almost everything: subject, place, characters, look within p5.brush (watercolour or ink, layered or flat, landscape or abstract), palette, light, music, opening, ending and camera path. Only the medium is fixed. The examples below are deliberately unlike *First Light*; go further than them.
 
 - Structures: **a field-guide page** (one creature, its habitat painted in around it, notes written as it acts); **a day on one view** (dawn, noon, dusk, night re-glazed over the same pencil drawing); **a journey across planes** (one long lateral move through five places separated by mist).
 - Openings: **a pencil line racing across blank paper** and becoming a horizon; **a close-up of a glaze drying**, pulled back to reveal what it is; **a handwritten question in the margin**, answered by painting.
