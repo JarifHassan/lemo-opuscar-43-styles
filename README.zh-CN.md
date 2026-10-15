@@ -14,7 +14,11 @@
 
 **最新：[OPUSCAR 98 的 98 种风格全部公开](https://lemomo-ai.github.io/lemo-opuscar/opuscar98/#styles)**：每部片的风格（标明 2D 还是 3D）、截图、可以直接拿去用的风格提示词、镜头设计和导演编排。
 
-<!-- fork:start -->**本 fork 新增第 44 种风格：[p5.brush 自然笔触](styles/p5-brush/STYLE.md)** · [**▶ 观看示范短片《First Light》**](https://github.com/JarifHassan/lemo-opuscar-43-styles/releases/tag/first-light)<!-- fork:end -->
+<!-- fork:start -->
+
+**本 fork 新增第 44 种风格：[p5.brush 自然笔触](styles/p5-brush/STYLE.md)** · [**▶ 观看示范短片《First Light》**](https://github.com/JarifHassan/lemo-opuscar-43-styles/releases/tag/first-light)
+
+<!-- fork:end -->
 
 </div>
 

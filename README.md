@@ -18,7 +18,11 @@ Pick a style, bring your own story, and let your coding agent direct the film.<b
 
 **New: [all 98 styles of OPUSCAR 98](https://lemomo-ai.github.io/lemo-opuscar/opuscar98/#styles)**: for every film, its style (2D or 3D), a frame, a style prompt you can reuse, and how its shots were directed.
 
-<!-- fork:start -->**This fork adds style 44: [p5.brush Natural Media](styles/p5-brush/STYLE.md)** · [**▶ Watch its demo, *First Light***](https://github.com/JarifHassan/lemo-opuscar-43-styles/releases/tag/first-light)<!-- fork:end -->
+<!-- fork:start -->
+
+**This fork adds style 44: [p5.brush Natural Media](styles/p5-brush/STYLE.md)** · [**▶ Watch its demo, *First Light***](https://github.com/JarifHassan/lemo-opuscar-43-styles/releases/tag/first-light)
+
+<!-- fork:end -->
 
 </div>
 
