@@ -2,7 +2,7 @@
 
 One example among many, and only a suggestion: this style is open (see STYLE.md), so *First Light* shows one thing p5.brush can do, not how a p5.brush film must look. Don't reuse its story, arc, shots, props, palette, score or timings; reuse its engine code only as tools.
 
-Demo: *First Light* (24 s) · `p5-brush.mp4` · source in [`demo/`](demo/)
+Demo: *First Light* (24 s) · `p5-brush.mp4` · [**watch or download** (release `first-light`)](https://github.com/JarifHassan/lemo-opuscar-43-styles/releases/tag/first-light) · source in [`demo/`](demo/)
 
 ## Story & structure
 
